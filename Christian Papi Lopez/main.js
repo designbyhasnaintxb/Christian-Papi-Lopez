@@ -20,10 +20,24 @@
   if (!motion) root.classList.remove('motion');
   if (G && ST) G.registerPlugin(ST);
 
-  /* ---------- Media slots: show the labelled placeholder until real files exist ---------- */
+  /* ---------- Media slots: real file → (demo photo, if the demo layer is loaded) → labelled placeholder ---------- */
+  const DEMO = window.VP_DEMO || null;
+  const slotOf = (src) => (src.split('/').pop() || '').replace(/\.[a-z0-9]+$/i, '').replace(/-(800|1600|poster)$/, '');
   $$('.media img').forEach((img) => {
     const fig = img.closest('.media');
-    const fail = () => { fig.classList.add('is-empty'); img.style.visibility = 'hidden'; };
+    const demo = DEMO && DEMO[slotOf(img.getAttribute('src') || '')];
+    const fail = () => {
+      if (demo && !fig.classList.contains('is-demo')) {
+        const pic = img.closest('picture');
+        if (pic) $$('source', pic).forEach((s) => s.remove());
+        img.removeAttribute('srcset');
+        fig.classList.add('is-demo');
+        img.addEventListener('error', () => { fig.classList.remove('is-demo'); fig.classList.add('is-empty'); img.style.visibility = 'hidden'; }, { once: true });
+        img.src = demo;
+        return;
+      }
+      fig.classList.add('is-empty'); img.style.visibility = 'hidden';
+    };
     img.addEventListener('error', fail, { once: true });
     if (img.complete && img.naturalWidth === 0 && img.getAttribute('loading') !== 'lazy') fail();
   });
