@@ -40,3 +40,9 @@ Every image and video on the redesigned homepage is a **named slot**. Until a re
 | `og` (optional) | — | 1.91:1 | Social share | Defaults to the hero crop |
 
 **Curation rules:** use each asset once (no repeats between Hero / About / Programs / Gallery). Pick the sharpest, most active frames for A-tier slots. Blurry, low-res or no-action shots are D-tier: leave them out or use them small in the gallery. Before launch, update each `<img alt>` in `index.html` to describe the actual photo.
+
+## Temporary demo photos
+
+`Christian Papi Lopez/assets/demo/demo-media.js` fills **empty** slots with hotlinked Pexels stock so the layout can be previewed. Each demo image is badged "Demo photo", and a real file in `assets/media/` always takes precedence. None of them show Papi or VamosPickle. Credits are in `assets/demo/CREDITS.md`.
+
+**Before launch:** delete the `<script src="assets/demo/demo-media.js">` line in `index.html` and the `assets/demo/` folder. This brings back the honest placeholders for any slot still missing real media.
