@@ -1,10 +1,21 @@
-# Netlify settings for the Coach Hans baseball coaching site (plain static site — no build step)
+# Netlify settings for the VamosPickle site (plain static site — no build step)
 [build]
   publish = "."
 
-# Local assets rarely change: cache them for a week (demo photos are hotlinked from Pexels)
+# Fonts and brand files never change in place: cache them for a year
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Photography and video: cache for a week (filenames are stable slot names, see docs/media-manifest.md)
+[[headers]]
+  for = "/assets/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/brand/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
@@ -15,3 +26,24 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
+
+# Existing vamospickle.com URLs. The redesign is a single page, so the old About and
+# Shop pages point at their sections. The POV posts and collab pages are NOT migrated
+# yet — see docs/vamospickle-audit.md (VERIFY) before launch; until then they fall
+# through to the homepage sections that summarise them instead of a 404.
+[[redirects]]
+  from = "/about"
+  to = "/#papi"
+  status = 301
+[[redirects]]
+  from = "/shop"
+  to = "/#shop"
+  status = 301
+[[redirects]]
+  from = "/pov/*"
+  to = "/#words"
+  status = 302
+[[redirects]]
+  from = "/collabs/*"
+  to = "/#events"
+  status = 302
