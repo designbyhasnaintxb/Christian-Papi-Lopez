@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en" class="motion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coach Hans | Baseball Coach — Baseball Training Built Around the Player</title>
+<meta name="description" content="Personalized baseball coaching with Coach Hans, designed to help players develop their skills, confidence, and understanding of the game.">
+<meta name="theme-color" content="#F4EFE6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coach Hans | Baseball Coach">
+<meta property="og:description" content="Baseball training built around the player. Personalized coaching designed to help players develop their skills, confidence, and understanding of the game.">
+<meta property="og:image" content="https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23142633'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23F4EFE6'/%3E%3Cpath d='M22 15q7 17 0 34M42 15q-7 17 0 34' fill='none' stroke='%23B9493F' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M25.5 32h13' stroke='%23142633' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<script>
+  /* Motion is opt-out: removed for reduced-motion users, or if GSAP fails to load. */
+  (function () {
+    var d = document.documentElement;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.remove('motion');
+    setTimeout(function () { if (!window.gsap) d.classList.remove('motion'); }, 3000);
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preload" as="image" imagesrcset="https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=720 720w, https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" imagesizes="(max-width: 1023px) 90vw, 40vw">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "#hans",
+      "name": "Coach Hans",
+      "jobTitle": "Baseball Coach",
+      "description": "Baseball coach offering personalized coaching focused on player development.",
+      "knowsAbout": ["Baseball", "Baseball coaching", "Player development"]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Baseball coaching",
+      "name": "Baseball coaching with Coach Hans",
+      "description": "Personalized baseball coaching designed to help players develop their skills, confidence, and understanding of the game.",
+      "provider": { "@id": "#hans" }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__label"></span></div>
+
+<!-- ═════════ HEADER ═════════ -->
+<header class="nav" id="nav">
+  <div class="nav__ticker" aria-hidden="true">
+    <div class="nav__ticker-track">
+      <span>Coach Hans · Baseball coach</span><i></i><span>Baseball training built around the player</span><i></i><span>Personal coaching</span><i></i><span>Player development</span><i></i><span>Players &amp; parents welcome</span><i></i><span>Send a coaching inquiry</span><i></i>
+    </div>
+  </div>
+
+  <div class="nav__barwrap">
+    <div class="nav__bar">
+      <a class="logo" href="#top" aria-label="Coach Hans, Baseball Coach — back to top">
+        <svg class="lm" viewBox="0 0 48 48" aria-hidden="true"><g class="lm-spin"><g class="lm-ball"><circle class="lm-c" cx="24" cy="24" r="20" pathLength="1"/><path class="lm-seam" d="M16 6.3Q22.5 24 16 41.7" pathLength="1"/><path class="lm-seam" d="M32 6.3Q25.5 24 32 41.7" pathLength="1"/><path class="lm-stitch" d="M16 6.3Q22.5 24 16 41.7M32 6.3Q25.5 24 32 41.7"/><path class="lm-h" d="M19.4 24h9.2"/></g></g></svg>
+        <span class="logo__text">
+          <span class="logo__name"><span><em class="logo__coach">Coach</em> Hans</span></span>
+          <span class="logo__court" aria-hidden="true"><svg class="logo__line" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1v4M1 3h98M99 1v4M50 .5v5" pathLength="1"/></svg></span>
+          <span class="logo__tag">Baseball Coach</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="#about">About</a>
+        <a href="#training">Training</a>
+        <a href="#development">Development</a>
+        <a href="#approach">Approach</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--dark btn--sm nav__cta" href="#start" data-focus="start" data-magnetic>
+          <span>Start training</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+        <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <span class="nav__menu-t" aria-hidden="true">Menu</span>
+          <span class="nav__menu-ic" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+      <span class="nav__progress" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
+</header>
+
+<!-- Full-screen menu -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <svg class="menu__court" viewBox="-10 -10 420 420" aria-hidden="true">
+    <path d="M200 380 L380 200 L200 20 L20 200 Z"/><path d="M200 380 L-10 170 M200 380 L410 170"/><circle cx="200" cy="200" r="22"/><path d="M-10 60 Q200 -60 410 60"/>
+  </svg>
+  <div class="wrap menu__inner">
+    <nav class="menu__nav" aria-label="Menu">
+      <p class="menu__k">Navigate</p>
+      <ol class="menu__links">
+        <li><a href="#top"><span class="menu__n">01</span><span class="menu__t">Home</span></a></li>
+        <li><a href="#intro"><span class="menu__n">02</span><span class="menu__t">At a glance</span></a></li>
+        <li><a href="#about"><span class="menu__n">03</span><span class="menu__t">Meet Coach Hans</span></a></li>
+        <li><a href="#training"><span class="menu__n">04</span><span class="menu__t">Training overview</span></a></li>
+        <li><a href="#development"><span class="menu__n">05</span><span class="menu__t">Player development</span></a></li>
+        <li><a href="#who"><span class="menu__n">06</span><span class="menu__t">Who it's for</span></a></li>
+        <li><a href="#explore"><span class="menu__n">07</span><span class="menu__t">Explore training</span></a></li>
+        <li><a href="#approach"><span class="menu__n">08</span><span class="menu__t">Coaching approach</span></a></li>
+        <li><a href="#gallery"><span class="menu__n">09</span><span class="menu__t">Gallery</span></a></li>
+        <li><a href="#start"><span class="menu__n">10</span><span class="menu__t">Start training</span></a></li>
+      </ol>
+    </nav>
+
+    <aside class="menu__card" aria-label="About Coach Hans">
+      <figure class="menu__photo media" data-ph="Baseball equipment">
+        <img src="https://images.pexels.com/photos/12783350/pexels-photo-12783350.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/12783350/pexels-photo-12783350.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/12783350/pexels-photo-12783350.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="420px" alt="" loading="lazy" decoding="async">
+      </figure>
+      <p class="menu__name">Coach Hans</p>
+      <p class="menu__role">Baseball coach · Player development</p>
+      <ul class="menu__facts">
+        <li><b>1:1</b><span>Personal coaching</span></li>
+        <li><b>Player</b><span>First approach</span></li>
+        <li><b>Grow</b><span>Skills &amp; confidence</span></li>
+      </ul>
+      <a class="btn btn--red btn--block" href="#start" data-focus="start">
+        <span>Start training</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <p class="menu__foot"><span>Personal</span><i></i><span>Player-first</span><i></i><span>Development</span></p>
+    </aside>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ═════════ 01 — HERO (new) ═════════ -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <!-- faint field geometry: foul lines, outfield arc, infield, mound, batter's boxes -->
+  <svg class="hero__field" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path class="hf hf--arc" d="M-20 330 Q620 -150 1260 330" pathLength="1"/>
+    <path class="hf" d="M620 950 L-40 290 M620 950 L1280 290" pathLength="1"/>
+    <path class="hf hf--grass" d="M330 660 Q620 380 910 660" pathLength="1"/>
+    <path class="hf hf--path" d="M620 900 L860 660 L620 420 L380 660 Z" pathLength="1"/>
+    <circle class="hf hf--mound" cx="620" cy="660" r="30" pathLength="1"/>
+    <path class="hf" d="M574 868h30v52h-30zM636 868h30v52h-30z" pathLength="1"/>
+  </svg>
+
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow"><span class="dot" aria-hidden="true"></span>Coach Hans · Baseball coach</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span class="line__in">Baseball training</span></span>
+        <span class="line"><span class="line__in">built around</span></span>
+        <span class="line line--sub"><span class="line__in"><em class="hero__mark">the player.</em><svg class="hero__stitch" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 Q150 2 296 12" pathLength="1"/><path class="hero__stitch-x" d="M4 12 Q150 2 296 12"/></svg></span></span>
+      </h1>
+      <p class="hero__lede fade">Personalized baseball coaching designed to help players develop their skills, confidence, and understanding of the game.</p>
+      <div class="hero__ctas fade">
+        <a class="btn btn--red" href="#start" data-focus="start" data-magnetic>
+          <span>Start training</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+        <a class="textlink" href="#about">Learn about coaching</a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <svg class="hero__seam" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M96 -10 Q-6 300 96 610" pathLength="1"/>
+        <path class="hero__seam-x" d="M96 -10 Q-6 300 96 610"/>
+      </svg>
+      <figure class="hero__photo media reveal-img" data-cursor="Play ball" data-ph="Baseball action">
+        <img src="https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=720 720w, https://images.pexels.com/photos/38223493/pexels-photo-38223493.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A teenage pitcher in a navy jersey following through on a dirt mound, the ball just released" fetchpriority="high" decoding="async">
+        <svg class="hero__diamond" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+          <path class="hd-foul" d="M200 476 L-10 336 M200 476 L410 336" pathLength="1"/>
+          <path class="hd-path" d="M200 470 L336 384 L200 300 L64 384 Z" pathLength="1"/>
+          <path class="hd-grass" d="M40 400 Q200 248 360 400" pathLength="1"/>
+        </svg>
+        <span class="hbase hbase--home" style="--x:50%;--y:94%" aria-hidden="true"></span>
+        <span class="hbase" style="--x:84%;--y:76.8%" aria-hidden="true"><i>1B</i></span>
+        <span class="hbase" style="--x:50%;--y:60%" aria-hidden="true"><i>2B</i></span>
+        <span class="hbase" style="--x:16%;--y:76.8%" aria-hidden="true"><i>3B</i></span>
+        <span class="hero__runner pball" aria-hidden="true"><span class="pball__holes"></span></span>
+        <span class="media__credit">Illustrative photo</span>
+      </figure>
+      <p class="tlabel fade"><span class="tlabel__k">Player-first</span><span class="tlabel__t">Personal baseball coaching</span></p>
+      <div class="hchip fade" aria-hidden="true">
+        <span class="hchip__k">Base path</span>
+        <span class="hchip__bases"><b class="is-on">Home</b><b>1st</b><b>2nd</b><b>3rd</b><b>Home</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- the visitor journey, laid out as a trip around the bases -->
+  <div class="wrap">
+    <ol class="bpath fade" aria-label="Explore the site">
+      <li><a href="#about"><span class="bpath__base" aria-hidden="true"></span><span class="bpath__k">Home</span><b>Discover</b><span>Meet Coach Hans</span></a></li>
+      <li><a href="#approach"><span class="bpath__base" aria-hidden="true"></span><span class="bpath__k">1st</span><b>Understand</b><span>How coaching works</span></a></li>
+      <li><a href="#training"><span class="bpath__base" aria-hidden="true"></span><span class="bpath__k">2nd</span><b>Explore</b><span>Training options</span></a></li>
+      <li><a href="#development"><span class="bpath__base" aria-hidden="true"></span><span class="bpath__k">3rd</span><b>Develop</b><span>The complete player</span></a></li>
+      <li class="bpath__home"><a href="#start" data-focus="start"><span class="bpath__base" aria-hidden="true"></span><span class="bpath__k">Home</span><b>Get in touch</b><span>Send an inquiry</span></a></li>
+    </ol>
+  </div>
+
+  <!-- Kinetic word band -->
+  <div class="kinetic" aria-hidden="true">
+    <div class="kinetic__row"><div class="kinetic__track">
+      <span>Baseball training</span><i class="kball"></i><span><em>built around the player</em></span><i class="kball"></i><span>Development</span><i class="kball"></i><span><em>confidence</em></span><i class="kball"></i><span>Understanding</span><i class="kball"></i>
+    </div></div>
+    <div class="kinetic__row kinetic__row--rev"><div class="kinetic__track kinetic__track--outline">
+      <span>Coach Hans</span><i class="kball"></i><span>Baseball coach</span><i class="kball"></i><span>Players &amp; parents</span><i class="kball"></i><span>Start training</span><i class="kball"></i>
+    </div></div>
+  </div>
+</section>
+
+<!-- ═════════ 02 — AT A GLANCE ═════════ -->
+<section class="snap" id="intro" aria-labelledby="snap-title">
+  <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">02 · At a glance</span></div>
+  <div class="wrap">
+    <div class="snap__head">
+      <p class="eyebrow">Coaching at a glance</p>
+      <h2 class="h2 split" id="snap-title">A personal approach <em>to the game.</em></h2>
+    </div>
+
+    <div class="snap__grid">
+      <ol class="snap__list">
+        <li class="snap__row">
+          <span class="snap__k">01</span>
+          <p class="snap__n snap__n--word" data-n="1-on-1">1-on-1</p>
+          <p class="snap__t"><b>Personal coaching</b><span>Coaching that pays attention to the individual player — their game, their goals and their pace.</span></p>
+        </li>
+        <li class="snap__row">
+          <span class="snap__k">02</span>
+          <p class="snap__n snap__n--word" data-n="Grow">Grow</p>
+          <p class="snap__t"><b>Player development</b><span>A focus on steady development: skills, understanding of the game and confidence.</span></p>
+        </li>
+        <li class="snap__row">
+          <span class="snap__k">03</span>
+          <p class="snap__n snap__n--word" data-n="Game">Game</p>
+          <p class="snap__t"><b>Baseball training</b><span>Practical, purposeful time spent on the game itself.</span></p>
+        </li>
+        <li class="snap__row snap__row--gold">
+          <span class="snap__k">04</span>
+          <p class="snap__n snap__n--word" data-n="Player">Player</p>
+          <p class="snap__t"><b>Player-first approach</b><span>Coaching starts with the player — not a one-size-fits-all program.</span></p>
+        </li>
+      </ol>
+
+      <figure class="snap__media media" data-ph="Baseball field">
+        <img src="https://images.pexels.com/photos/163248/home-plate-baseball-sport-home-163248.jpeg?auto=compress&cs=tinysrgb&w=1100" srcset="https://images.pexels.com/photos/163248/home-plate-baseball-sport-home-163248.jpeg?auto=compress&cs=tinysrgb&w=700 700w, https://images.pexels.com/photos/163248/home-plate-baseball-sport-home-163248.jpeg?auto=compress&cs=tinysrgb&w=1100 1100w" sizes="(max-width: 1023px) 90vw, 30vw" alt="Looking down on a freshly chalked home plate, batter’s boxes and red-clay dirt" loading="lazy" decoding="async">
+        <figcaption class="snap__cap"><span>Built around</span><b>the player</b></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 03 — ABOUT COACH HANS ═════════ -->
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="wrap about__grid">
+    <div class="about__media">
+      <figure class="media about__photo reveal-img" data-ph="Coach Hans photo coming soon">
+        <img src="https://images.pexels.com/photos/9845417/pexels-photo-9845417.jpeg?auto=compress&cs=tinysrgb&w=1300" srcset="https://images.pexels.com/photos/9845417/pexels-photo-9845417.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/9845417/pexels-photo-9845417.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(max-width: 1023px) 90vw, 36vw" alt="A bucket of well-used practice baseballs with red stitching" loading="lazy" decoding="async">
+      </figure>
+      <p class="about__cap">Illustrative photo. Photos of Coach Hans coming soon.</p>
+    </div>
+
+    <div class="about__body">
+      <p class="eyebrow">About Coach Hans</p>
+      <h2 class="h2 split" id="about-title">Meet <em>Coach Hans.</em></h2>
+      <p class="about__intro">Coach Hans provides baseball coaching focused on helping players understand their game, develop their skills, and receive more personalized support.</p>
+      <p class="about__more fade">This site is the starting point for his coaching online — with room to add his experience, playing background, credentials and coaching history once they're confirmed.</p>
+      <p class="about__warm fade">One player, one plan — coaching built around the person holding the bat.</p>
+
+      <!-- Placeholder-ready: replace the "to be added" rows with Hans's confirmed details -->
+      <ul class="roles fade">
+        <li><span>Focus</span><span>Baseball coaching &amp; player development</span></li>
+        <li><span>Approach</span><span>Personal, player-first coaching</span></li>
+        <li class="roles__tbc"><span>Experience</span><span>To be added once confirmed</span></li>
+        <li class="roles__tbc"><span>Background</span><span>To be added once confirmed</span></li>
+        <li class="roles__tbc"><span>Credentials</span><span>To be added once confirmed</span></li>
+      </ul>
+
+      <a class="textlink about__go fade" href="#start" data-focus="start">Talk to Coach Hans about training</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 04 — TRAINING OVERVIEW (horizontal journey on desktop, vertical on mobile) ═════════ -->
+<section class="tour" id="training" aria-labelledby="tour-title">
+  <div class="seam seam--light" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">04 · Training</span></div>
+  <div class="tour__pin">
+    <div class="tour__rail" aria-hidden="true">
+      <span class="tour__line"><i></i></span>
+      <span class="tour__marks"><i></i><i></i><i></i><i></i></span>
+      <span class="pball tour__ball"><span class="pball__holes"></span></span>
+    </div>
+    <div class="tour__track">
+      <div class="tour-intro">
+        <p class="eyebrow eyebrow--light">Training overview</p>
+        <h2 class="h2 h2--light split" id="tour-title">Training options, <em>built around the player.</em></h2>
+        <p class="tour-intro__p">Coaching starts with the individual player. Here's an overview of the training formats — including options that are still to be confirmed with Coach Hans.</p>
+        <figure class="tour-intro__photo media" data-ph="Baseball training">
+          <img src="https://images.pexels.com/photos/36396068/pexels-photo-36396068.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/36396068/pexels-photo-36396068.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/36396068/pexels-photo-36396068.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(max-width: 1023px) 90vw, 40vw" alt="Aerial view of an empty baseball diamond in a park, surrounded by autumn trees" loading="lazy" decoding="async">
+          <figcaption>Illustrative photo</figcaption>
+        </figure>
+        <p class="tour-intro__hint" aria-hidden="true">Scroll the lineup →</p>
+      </div>
+
+      <article class="stop">
+        <span class="stop__hole" aria-hidden="true"></span>
+        <p class="stop__label">One-on-one</p>
+        <p class="stop__n" aria-hidden="true">01</p>
+        <h3 class="stop__title">Private baseball training</h3>
+        <p class="stop__what">Personal coaching</p>
+        <p class="stop__p">One-on-one baseball coaching focused on the individual player's needs.</p>
+        <svg class="stop__court" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 180 L180 100 L100 20 L20 100 Z"/><path d="M100 180 L0 80 M100 180 L200 80"/><circle cx="100" cy="100" r="12"/></svg>
+      </article>
+
+      <article class="stop">
+        <span class="stop__hole" aria-hidden="true"></span>
+        <p class="stop__label">Flexible path</p>
+        <p class="stop__n" aria-hidden="true">02</p>
+        <h3 class="stop__title">Player development</h3>
+        <p class="stop__what">Overall baseball abilities</p>
+        <p class="stop__p">A flexible path for players looking to improve their overall baseball abilities.</p>
+        <svg class="stop__court" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 180 L180 100 L100 20 L20 100 Z"/><path d="M100 180 L0 80 M100 180 L200 80"/><circle cx="100" cy="100" r="12"/></svg>
+      </article>
+
+      <article class="stop stop--tbc">
+        <span class="stop__hole" aria-hidden="true"></span>
+        <p class="stop__label">Potential option — to confirm</p>
+        <p class="stop__n" aria-hidden="true">03</p>
+        <h3 class="stop__title">Group training</h3>
+        <p class="stop__what">Not yet confirmed</p>
+        <p class="stop__p">Training in a small group may be a possibility. Please confirm availability with Coach Hans before planning around it.</p>
+        <svg class="stop__court" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 180 L180 100 L100 20 L20 100 Z"/><path d="M100 180 L0 80 M100 180 L200 80"/><circle cx="100" cy="100" r="12"/></svg>
+      </article>
+
+      <article class="stop stop--tbc">
+        <span class="stop__hole" aria-hidden="true"></span>
+        <p class="stop__label">Potential option — to confirm</p>
+        <p class="stop__n" aria-hidden="true">04</p>
+        <h3 class="stop__title">Team training</h3>
+        <p class="stop__what">Not yet confirmed</p>
+        <p class="stop__p">Team sessions are something to discuss with Coach Hans — not a confirmed program at this stage.</p>
+        <a class="textlink stop__go" href="#explore">Find the right training path</a>
+        <svg class="stop__court" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 180 L180 100 L100 20 L20 100 Z"/><path d="M100 180 L0 80 M100 180 L200 80"/><circle cx="100" cy="100" r="12"/></svg>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 05 — PLAYER DEVELOPMENT (new · interactive diamond) ═════════ -->
+<section class="dev" id="development" aria-labelledby="dev-title" style="--acc: var(--red)">
+  <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">05 · Player development</span></div>
+  <div class="wrap">
+    <div class="dev__head">
+      <div>
+        <p class="eyebrow">Player development</p>
+        <h2 class="h2 split" id="dev-title">Build the <em>complete player.</em></h2>
+      </div>
+      <div class="dev__note fade">
+        <p>Choose a base to explore what player development can include.</p>
+        <p class="dev__flag"><span aria-hidden="true">i</span>Potential development categories — the specific focus of coaching is confirmed with Coach Hans.</p>
+      </div>
+    </div>
+
+    <div class="dev__grid">
+      <div class="dev__fieldwrap fade">
+        <div class="diamond" id="diamond">
+          <svg class="diamond__svg" viewBox="0 0 100 100" aria-hidden="true">
+            <path class="dm-arc" d="M-2 34 Q50 -6 102 34" />
+            <path class="dm-dirt" d="M50 98 L92 56 Q93 51 88 47 L54 13 Q50 9 46 13 L12 47 Q7 51 8 56 Z" />
+            <path class="dm-grass" d="M50 80 L77 53 L50 26 L23 53 Z" />
+            <path class="dm-foul" d="M50 87 L-2 35 M50 87 L102 35" pathLength="1" />
+            <path class="dm-path" d="M50 87 L84 53 L50 19 L16 53 Z" pathLength="1" />
+            <circle class="dm-mound" cx="50" cy="53" r="6.5" />
+            <path class="dm-rubber" d="M48 53h4" />
+            <path class="dm-box" d="M43.5 83h4v7h-4zM52.5 83h4v7h-4z" />
+          </svg>
+          <p class="diamond__center" aria-hidden="true"><span>Player</span><span>development</span></p>
+
+          <button type="button" class="base base--home is-active" style="--x:50%;--y:87%" data-k="0" aria-pressed="true" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>Home</small>Hitting</span></button>
+          <button type="button" class="base" style="--x:84%;--y:53%" data-k="1" aria-pressed="false" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>1st</small>Fundamentals</span></button>
+          <button type="button" class="base" style="--x:50%;--y:19%" data-k="2" aria-pressed="false" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>2nd</small>Game understanding</span></button>
+          <button type="button" class="base" style="--x:16%;--y:53%" data-k="3" aria-pressed="false" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>3rd</small>Fielding &amp; throwing</span></button>
+          <button type="button" class="base base--out" style="--x:15%;--y:12%" data-k="4" aria-pressed="false" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>Outfield</small>Confidence</span></button>
+          <button type="button" class="base base--out" style="--x:85%;--y:12%" data-k="5" aria-pressed="false" aria-controls="devPanel"><span class="base__pad" aria-hidden="true"></span><span class="base__lbl"><small>Outfield</small>Position development</span></button>
+
+          <span class="diamond__marker pball" aria-hidden="true"><span class="pball__holes"></span></span>
+        </div>
+      </div>
+
+      <div class="dev__panel" id="devPanel">
+        <figure class="dev__photo media" data-ph="Player development">
+          <img class="is-on" src="https://images.pexels.com/photos/1374374/pexels-photo-1374374.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/1374374/pexels-photo-1374374.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/1374374/pexels-photo-1374374.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A young hitter in a red T-shirt following through on a practice swing at sunset" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/13800912/pexels-photo-13800912.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/13800912/pexels-photo-13800912.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/13800912/pexels-photo-13800912.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="Close-up of a player’s cleat kicking up infield dirt beside a base" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/17724041/pexels-photo-17724041.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/17724041/pexels-photo-17724041.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/17724041/pexels-photo-17724041.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A catcher crouched behind home plate giving a hand signal" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/12120660/pexels-photo-12120660.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/12120660/pexels-photo-12120660.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/12120660/pexels-photo-12120660.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A young infielder crouching low to field a ground ball" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/32024627/pexels-photo-32024627.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/32024627/pexels-photo-32024627.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/32024627/pexels-photo-32024627.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A player holding a glove on the infield at dusk, backlit by golden light" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/2446564/pexels-photo-2446564.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/2446564/pexels-photo-2446564.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/2446564/pexels-photo-2446564.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 40vw" alt="A young infielder diving across the dirt toward a ball in mid-air" loading="lazy" decoding="async">
+          <span class="media__credit">Illustrative photo</span>
+        </figure>
+
+        <div class="dev__body" aria-live="polite">
+          <article class="dpane" data-goal="Hitting" data-acc="var(--red)">
+            <p class="dpane__k"><span>Home plate</span><span>01 / 06</span></p>
+            <h3 class="dpane__t">Hitting</h3>
+            <p class="dpane__p">Time at the plate can look at stance, balance, timing and approach — worked through at a pace that suits the player.</p>
+            <ul class="dpane__tags"><li>Stance &amp; balance</li><li>Timing</li><li>Approach at the plate</li></ul>
+          </article>
+          <article class="dpane" data-goal="Fundamentals" data-acc="var(--green)" hidden>
+            <p class="dpane__k"><span>First base</span><span>02 / 06</span></p>
+            <h3 class="dpane__t">Fundamentals</h3>
+            <p class="dpane__p">The basics every part of the game is built on — movement, footwork, catching and throwing mechanics, and good habits.</p>
+            <ul class="dpane__tags"><li>Footwork</li><li>Ready position</li><li>Good habits</li></ul>
+          </article>
+          <article class="dpane" data-goal="Game understanding" data-acc="var(--tan)" hidden>
+            <p class="dpane__k"><span>Second base</span><span>03 / 06</span></p>
+            <h3 class="dpane__t">Game understanding</h3>
+            <p class="dpane__p">Knowing where to be and why: situations, positioning and decision-making, so players can feel more comfortable in a game.</p>
+            <ul class="dpane__tags"><li>Situations</li><li>Positioning</li><li>Decision-making</li></ul>
+          </article>
+          <article class="dpane" data-goal="Fielding,Throwing" data-acc="var(--leather)" hidden>
+            <p class="dpane__k"><span>Third base</span><span>04 / 06</span></p>
+            <h3 class="dpane__t">Fielding &amp; throwing</h3>
+            <p class="dpane__p">Glove work, footwork to the ball and throwing accuracy — building movements a player can repeat and trust.</p>
+            <ul class="dpane__tags"><li>Glove work</li><li>Footwork to the ball</li><li>Throwing accuracy</li></ul>
+          </article>
+          <article class="dpane" data-goal="Confidence" data-acc="var(--red)" hidden>
+            <p class="dpane__k"><span>Outfield</span><span>05 / 06</span></p>
+            <h3 class="dpane__t">Confidence</h3>
+            <p class="dpane__p">Feeling prepared and composed on the field. Steady, encouraging development can help players trust their own game.</p>
+            <ul class="dpane__tags"><li>Composure</li><li>Preparation</li><li>Trusting your game</li></ul>
+          </article>
+          <article class="dpane" data-goal="General development" data-acc="var(--green)" hidden>
+            <p class="dpane__k"><span>Outfield</span><span>06 / 06</span></p>
+            <h3 class="dpane__t">Position development</h3>
+            <p class="dpane__p">Understanding the responsibilities of a position — or exploring a new one — as part of a player's overall development.</p>
+            <ul class="dpane__tags"><li>Responsibilities</li><li>Positioning</li><li>Versatility</li></ul>
+          </article>
+        </div>
+
+        <a class="btn btn--dark dev__cta" href="#start" data-focus="start" data-interest="Player development" data-goal="Hitting" data-magnetic>
+          <span>Ask about player development</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 06 — WHO COACHING IS FOR ═════════ -->
+<section class="court" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="court__head">
+      <div>
+        <p class="eyebrow eyebrow--light">Who coaching is for</p>
+        <h2 class="h2 h2--light split" id="who-title">For players ready <em>to keep improving.</em></h2>
+      </div>
+      <p class="court__aside fade">Broad by design — coaching is shaped around the individual player rather than one fixed type of athlete.</p>
+    </div>
+
+    <ol class="zones zones--four">
+      <li class="zone fade"><span class="zone__n" aria-hidden="true">01</span><h3 class="zone__t">Players looking to improve</h3><p class="zone__p">Players who want to take the next step in their game, whatever that looks like for them.</p></li>
+      <li class="zone fade"><span class="zone__n" aria-hidden="true">02</span><h3 class="zone__t">Parents looking for coaching</h3><p class="zone__p">Parents and guardians looking for personal baseball coaching for their player.</p></li>
+      <li class="zone fade"><span class="zone__n" aria-hidden="true">03</span><h3 class="zone__t">Players building fundamentals</h3><p class="zone__p">Players who want a stronger foundation in the basics of the game.</p></li>
+      <li class="zone fade"><span class="zone__n" aria-hidden="true">04</span><h3 class="zone__t">Players seeking personalized development</h3><p class="zone__p">Players who want coaching shaped around their own needs and goals.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════════ 07 — TRAINING EXPLORER (new · lineup card) ═════════ -->
+<section class="xp" id="explore" aria-labelledby="xp-title">
+  <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">07 · Explore training</span></div>
+  <div class="wrap">
+    <div class="xp__head">
+      <div>
+        <p class="eyebrow">Training explorer</p>
+        <h2 class="h2 split" id="xp-title">What kind of <em>training are you looking for?</em></h2>
+      </div>
+      <p class="xp__note fade">Pick a path. Your choice carries straight into the inquiry form, so Coach Hans knows where to start.</p>
+    </div>
+
+    <div class="xp__board fade">
+      <div class="xp__lineup">
+        <p class="xp__cardh" aria-hidden="true"><span>Lineup</span><span>Training type</span><span>Pos.</span></p>
+        <div class="xp__opts" role="tablist" aria-label="Training types" aria-orientation="vertical">
+          <button type="button" class="xp__opt" role="tab" id="xt-0" aria-controls="xp-0" aria-selected="true" data-format="One-on-one" data-status="Ask Coach Hans"><span class="xp__no">1</span><span class="xp__name">Private training</span><span class="xp__pos">1:1</span></button>
+          <button type="button" class="xp__opt" role="tab" id="xt-1" aria-controls="xp-1" aria-selected="false" tabindex="-1" data-format="Flexible path" data-status="Ask Coach Hans"><span class="xp__no">2</span><span class="xp__name">Player development</span><span class="xp__pos">DEV</span></button>
+          <button type="button" class="xp__opt xp__opt--tbc" role="tab" id="xt-2" aria-controls="xp-2" aria-selected="false" tabindex="-1" data-format="Small group" data-status="To confirm"><span class="xp__no">3</span><span class="xp__name">Group training<small>To confirm</small></span><span class="xp__pos">GRP</span></button>
+          <button type="button" class="xp__opt xp__opt--tbc" role="tab" id="xt-3" aria-controls="xp-3" aria-selected="false" tabindex="-1" data-format="Team setting" data-status="To confirm"><span class="xp__no">4</span><span class="xp__name">Team training<small>To confirm</small></span><span class="xp__pos">TEAM</span></button>
+          <span class="xp__ball pball" aria-hidden="true"><span class="pball__holes"></span></span>
+        </div>
+        <p class="xp__dugout" aria-hidden="true"><span>Dugout</span></p>
+      </div>
+
+      <div class="xp__stage">
+        <div class="xp__score" aria-hidden="true">
+          <p><span>Path</span><b class="xp__s-n">01</b></p>
+          <p><span>Format</span><b class="xp__s-f">One-on-one</b></p>
+          <p><span>Status</span><b class="xp__s-s">Ask Coach Hans</b></p>
+        </div>
+
+        <article class="xpane" role="tabpanel" id="xp-0" aria-labelledby="xt-0">
+          <figure class="xpane__photo media" data-ph="Private training"><img src="https://images.pexels.com/photos/264337/pexels-photo-264337.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/264337/pexels-photo-264337.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/264337/pexels-photo-264337.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 34vw" alt="A coach crouching to show a young player how to grip the ball" loading="lazy" decoding="async"><span class="media__credit">Illustrative photo</span></figure>
+          <div class="xpane__body">
+            <p class="xpane__k">Pathway 01</p>
+            <h3 class="xpane__t">Private training</h3>
+            <p class="xpane__p">One-on-one baseball coaching focused on the individual player's needs.</p>
+            <ul class="xpane__list"><li>Sessions shaped around one player</li><li>Attention on that player's own goals</li><li>Scheduling and location confirmed directly with Coach Hans</li></ul>
+            <div class="xpane__cta">
+              <a class="btn btn--red" href="#start" data-focus="start" data-interest="Private training"><span>Ask about private training</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="xpane" role="tabpanel" id="xp-1" aria-labelledby="xt-1" hidden>
+          <figure class="xpane__photo media" data-ph="Player development"><img src="https://images.pexels.com/photos/6249823/pexels-photo-6249823.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/6249823/pexels-photo-6249823.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/6249823/pexels-photo-6249823.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 34vw" alt="A youth player standing near a base while a coach watches from behind" loading="lazy" decoding="async"><span class="media__credit">Illustrative photo</span></figure>
+          <div class="xpane__body">
+            <p class="xpane__k">Pathway 02</p>
+            <h3 class="xpane__t">Player development</h3>
+            <p class="xpane__p">A flexible path for players looking to improve their overall baseball abilities.</p>
+            <ul class="xpane__list"><li>Looks at the player's game as a whole</li><li>Areas to develop identified together</li><li>Paced to the individual player</li></ul>
+            <div class="xpane__cta">
+              <a class="btn btn--red" href="#development" data-interest="Player development"><span>Explore player development</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+              <a class="textlink" href="#start" data-focus="start" data-interest="Player development">Or ask about it</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="xpane xpane--tbc" role="tabpanel" id="xp-2" aria-labelledby="xt-2" hidden>
+          <figure class="xpane__photo media" data-ph="Group training"><img src="https://images.pexels.com/photos/30848009/pexels-photo-30848009.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/30848009/pexels-photo-30848009.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/30848009/pexels-photo-30848009.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 34vw" alt="A group of players in a huddle listening to a coach" loading="lazy" decoding="async"><span class="media__credit">Illustrative photo</span></figure>
+          <div class="xpane__body">
+            <p class="xpane__flag">Potential option — confirm with Coach Hans</p>
+            <h3 class="xpane__t">Group training</h3>
+            <p class="xpane__p">Training in a small group could be an option. It isn't a confirmed program yet — let Coach Hans know you're interested and he can tell you whether it's available.</p>
+            <ul class="xpane__list"><li>Not currently confirmed</li><li>Registering interest helps gauge demand</li><li>No commitment by asking</li></ul>
+            <div class="xpane__cta">
+              <a class="btn btn--dark" href="#start" data-focus="start" data-interest="Group training — interest"><span>Register interest</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="xpane xpane--tbc" role="tabpanel" id="xp-3" aria-labelledby="xt-3" hidden>
+          <figure class="xpane__photo media" data-ph="Team training"><img src="https://images.pexels.com/photos/30848008/pexels-photo-30848008.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/30848008/pexels-photo-30848008.jpeg?auto=compress&cs=tinysrgb&w=760 760w, https://images.pexels.com/photos/30848008/pexels-photo-30848008.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width: 1023px) 90vw, 34vw" alt="A team in red jerseys gathered in a loose circle on a dirt field" loading="lazy" decoding="async"><span class="media__credit">Illustrative photo</span></figure>
+          <div class="xpane__body">
+            <p class="xpane__flag">Potential option — confirm with Coach Hans</p>
+            <h3 class="xpane__t">Team training</h3>
+            <p class="xpane__p">Sessions for a team may be something to discuss. It isn't a confirmed program at this stage — coaches and team representatives are welcome to ask.</p>
+            <ul class="xpane__list"><li>Not currently confirmed</li><li>Coaches &amp; team representatives welcome to ask</li><li>No commitment by asking</li></ul>
+            <div class="xpane__cta">
+              <a class="btn btn--dark" href="#start" data-focus="start" data-interest="Team training — interest"><span>Register interest</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 08 — COACHING APPROACH (one ball trajectory joins the steps) ═════════ -->
+<section class="journey" id="approach" aria-labelledby="journey-title">
+  <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">08 · Approach</span></div>
+  <div class="wrap">
+    <div class="journey__head">
+      <div>
+        <p class="eyebrow">Coaching approach</p>
+        <h2 class="h2 split" id="journey-title">A simple approach. <em>Player first.</em></h2>
+      </div>
+      <p class="journey__note fade">A general outline of how coaching can work — always shaped around the individual player.</p>
+    </div>
+
+    <div class="journey__stage">
+      <svg class="journey__path" aria-hidden="true"><path class="journey__base"/><path class="journey__draw"/></svg>
+      <div class="pball journey__ball" aria-hidden="true"><span class="pball__holes"></span></div>
+      <ol class="journey__steps journey__steps--five">
+        <li class="jstep"><span class="jstep__dot" aria-hidden="true"></span><p class="jstep__n">Step 01</p><h3 class="jstep__t">Understand the player</h3><p class="jstep__p">Start with the player: where their game is today and what they enjoy about it.</p></li>
+        <li class="jstep"><span class="jstep__dot" aria-hidden="true"></span><p class="jstep__n">Step 02</p><h3 class="jstep__t">Identify areas to develop</h3><p class="jstep__p">Agree on the areas that matter most right now.</p></li>
+        <li class="jstep"><span class="jstep__dot" aria-hidden="true"></span><p class="jstep__n">Step 03</p><h3 class="jstep__t">Train with purpose</h3><p class="jstep__p">Work on those areas with clear, practical focus.</p></li>
+        <li class="jstep"><span class="jstep__dot" aria-hidden="true"></span><p class="jstep__n">Step 04</p><h3 class="jstep__t">Build confidence</h3><p class="jstep__p">Help the player feel more prepared and comfortable in their game.</p></li>
+        <li class="jstep"><span class="jstep__dot" aria-hidden="true"></span><p class="jstep__n">Step 05</p><h3 class="jstep__t">Keep developing</h3><p class="jstep__p">Revisit, adjust and keep building from there.</p></li>
+      </ol>
+    </div>
+
+    <a class="textlink journey__go fade" href="#start" data-focus="start">Start with step 01</a>
+  </div>
+</section>
+
+<!-- ═════════ 09 — GALLERY / MEDIA ═════════ -->
+<section class="gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Baseball in focus</p>
+      <h2 class="h2 split" id="gallery-title">The game. The field. <em>The work.</em></h2>
+      <p class="head__note fade">Illustrative baseball photography — photos from Coach Hans's own sessions coming soon.</p>
+      <!-- Testimonials: none yet. Add real, permission-given player/parent quotes here once Hans shares them. -->
+    </div>
+  </div>
+
+  <div class="wrap reel">
+    <figure class="reel__feature media">
+      <img src="https://images.pexels.com/photos/18492671/pexels-photo-18492671.jpeg?auto=compress&cs=tinysrgb&w=2000" srcset="https://images.pexels.com/photos/18492671/pexels-photo-18492671.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w, https://images.pexels.com/photos/18492671/pexels-photo-18492671.jpeg?auto=compress&cs=tinysrgb&w=2000 2000w" sizes="(max-width: 1600px) 94vw, 1500px" alt="A dusty base half-buried in infield dirt at golden hour" loading="lazy" decoding="async">
+      <button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/18492671/pexels-photo-18492671.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: The field — golden hour on the infield"></button>
+      <figcaption class="reel__cap"><b>The field.</b>Golden hour on the infield</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="grid">
+      <figure class="tile media"><img src="https://images.pexels.com/photos/159550/baseball-foul-ball-hit-baseball-bat-159550.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/159550/baseball-foul-ball-hit-baseball-bat-159550.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/159550/baseball-foul-ball-hit-baseball-bat-159550.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A batter in a blue helmet a split-second before the bat meets the ball" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/159550/baseball-foul-ball-hit-baseball-bat-159550.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: At the plate — eyes on the ball"></button><figcaption class="tile__cap"><b>At the plate</b>Eyes on the ball</figcaption></figure>
+      <figure class="tile media"><img src="https://images.pexels.com/photos/17219668/pexels-photo-17219668.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/17219668/pexels-photo-17219668.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/17219668/pexels-photo-17219668.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A scuffed, dirt-stained baseball resting on red infield gravel" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/17219668/pexels-photo-17219668.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: The details — a well-used ball"></button><figcaption class="tile__cap"><b>The details</b>A well-used ball</figcaption></figure>
+      <figure class="tile media"><img src="https://images.pexels.com/photos/16240587/pexels-photo-16240587.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/16240587/pexels-photo-16240587.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/16240587/pexels-photo-16240587.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A boy in a maroon jersey winding up to throw on a grass field in evening light" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/16240587/pexels-photo-16240587.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: Throwing — evening throws"></button><figcaption class="tile__cap"><b>Throwing</b>Evening throws</figcaption></figure>
+      <figure class="tile media"><img src="https://images.pexels.com/photos/4437661/pexels-photo-4437661.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/4437661/pexels-photo-4437661.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/4437661/pexels-photo-4437661.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A young player watching the game through the dugout’s chain-link fence" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/4437661/pexels-photo-4437661.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: From the dugout — watching the game"></button><figcaption class="tile__cap"><b>From the dugout</b>Watching the game</figcaption></figure>
+      <figure class="tile media"><img src="https://images.pexels.com/photos/38225955/pexels-photo-38225955.jpeg?auto=compress&cs=tinysrgb&w=1000&fm=jpg" srcset="https://images.pexels.com/photos/38225955/pexels-photo-38225955.jpeg?auto=compress&cs=tinysrgb&w=600&fm=jpg 600w, https://images.pexels.com/photos/38225955/pexels-photo-38225955.jpeg?auto=compress&cs=tinysrgb&w=1000&fm=jpg 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A hitter swinging at home plate, seen through batting-cage netting" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/38225955/pexels-photo-38225955.jpeg?auto=compress&cs=tinysrgb&w=1600&fm=jpg" aria-label="View larger: Batting practice — swings in the cage"></button><figcaption class="tile__cap"><b>Batting practice</b>Swings in the cage</figcaption></figure>
+      <figure class="tile media"><img src="https://images.pexels.com/photos/13706352/pexels-photo-13706352.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/13706352/pexels-photo-13706352.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/13706352/pexels-photo-13706352.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w" sizes="(max-width: 700px) 75vw, 32vw" alt="A high-school pitcher just after releasing the ball on the mound" loading="lazy" decoding="async"><button type="button" class="tile__open" data-cursor="View" data-full="https://images.pexels.com/photos/13706352/pexels-photo-13706352.jpeg?auto=compress&cs=tinysrgb&w=1600" aria-label="View larger: On the mound — delivery"></button><figcaption class="tile__cap"><b>On the mound</b>Delivery</figcaption></figure>
+    </div>
+    <p class="grid__hint" aria-hidden="true">Swipe for more →</p>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure class="lightbox__fig"><img alt=""><figcaption class="lightbox__cap"></figcaption></figure>
+    <button type="button" class="lightbox__close" aria-label="Close photo">×</button>
+  </dialog>
+</section>
+
+<!-- ═════════ 10 — GET STARTED · PLAYER / PARENT INQUIRY (new · guided flow) ═════════ -->
+<section class="inq" id="start" aria-labelledby="inq-title" tabindex="-1">
+  <div class="seam seam--light" aria-hidden="true"><span class="seam__line"></span><span class="seam__tag">10 · Get started</span></div>
+  <div class="wrap inq__grid">
+    <div class="inq__intro">
+      <p class="eyebrow eyebrow--light">Get started</p>
+      <h2 class="h2 h2--light split" id="inq-title">Ready to <em class="mark mark--dark">start training?</em></h2>
+      <p class="inq__lede fade">Tell Coach Hans what the player is looking for and send a simple coaching inquiry.</p>
+
+      <!-- progress: the ball works its way around the bases as the form advances -->
+      <div class="run fade" aria-hidden="true">
+        <svg class="run__svg" viewBox="0 0 200 200">
+          <path class="run__base" d="M100 180 L180 100 L100 20 L20 100 Z"/>
+          <path class="run__done" d="M100 180 L180 100 L100 20 L20 100 Z" pathLength="1"/>
+          <circle class="run__mound" cx="100" cy="100" r="9"/>
+        </svg>
+        <span class="run__bag run__bag--home" style="--x:50%;--y:90%"></span>
+        <span class="run__bag" style="--x:90%;--y:50%"></span>
+        <span class="run__bag" style="--x:50%;--y:10%"></span>
+        <span class="run__bag" style="--x:10%;--y:50%"></span>
+        <span class="run__lbl" style="--x:50%;--y:90%" data-at="0">Who</span>
+        <span class="run__lbl" style="--x:90%;--y:50%" data-at="1">Player</span>
+        <span class="run__lbl" style="--x:50%;--y:10%" data-at="2">Training</span>
+        <span class="run__lbl" style="--x:10%;--y:50%" data-at="3">Goal</span>
+        <span class="run__ball pball"><span class="pball__holes"></span></span>
+        <p class="run__now"><span class="run__step">Step 1 of 6</span><b class="run__name">Who are you?</b></p>
+      </div>
+
+      <p class="inq__carry" hidden><span>Carried over from your selection</span><b></b></p>
+      <p class="inq__note fade">Sending an inquiry doesn't book a session — it starts a conversation with Coach Hans.</p>
+    </div>
+
+    <!-- Netlify Forms: submissions appear in the Netlify dashboard under "Forms → coaching-inquiry" -->
+    <form class="iform fade" id="inquiryForm" name="coaching-inquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="coaching-inquiry">
+      <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="iform__top" aria-hidden="true">
+        <p class="iform__count">Step <b class="iform__n">1</b> / 6</p>
+        <ol class="iform__bar"><li class="is-on"></li><li></li><li></li><li></li><li></li><li></li></ol>
+      </div>
+
+      <fieldset class="istep is-active" data-name="Who are you?">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">01</span>Who are you?</legend>
+        <p class="istep__hint">So Coach Hans knows who he's hearing from.</p>
+        <div class="opts">
+          <label class="ocard"><input id="start-first" type="radio" name="role" value="Parent / guardian" required><span><i class="ocard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9.5" r="2.2"/><path d="M3.5 20c.6-3.6 2.8-5.5 5.5-5.5s4.9 1.9 5.5 5.5M14.5 15.6c.8-.7 1.6-1 2.5-1 2 0 3.3 1.5 3.8 4.4"/></svg></i><b>Parent / guardian</b><small>Asking for a player</small></span></label>
+          <label class="ocard"><input type="radio" name="role" value="Player"><span><i class="ocard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 4.5c1.6 2.2 1.6 12.8 0 15M15.8 4.5c-1.6 2.2-1.6 12.8 0 15"/></svg></i><b>Player</b><small>Asking for myself</small></span></label>
+          <label class="ocard"><input type="radio" name="role" value="Coach / team representative"><span><i class="ocard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2.5"/><path d="M8 8.5h8M8 12h8M8 15.5h5"/></svg></i><b>Coach / team rep</b><small>Asking for a team or group</small></span></label>
+          <label class="ocard"><input type="radio" name="role" value="Other"><span><i class="ocard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .8-1 1.5v.6M12 16.6v.1"/></svg></i><b>Other</b><small>Something else</small></span></label>
+        </div>
+        <p class="istep__err" role="alert"></p>
+      </fieldset>
+
+      <fieldset class="istep" data-name="Player details">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">02</span>Player details</legend>
+        <p class="istep__hint">Just the basics, so Coach Hans has some context.</p>
+        <div class="field">
+          <label for="f-player"><span class="f-player-lbl">Player name</span> <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-player" name="player_name" type="text" autocomplete="off" required>
+          <span class="field__err" id="f-player-err"></span>
+        </div>
+        <div class="field">
+          <label for="f-age"><span class="f-age-lbl">Player age</span> <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-age" name="player_age" type="text" inputmode="numeric" maxlength="20" required>
+          <span class="field__err" id="f-age-err"></span>
+        </div>
+      </fieldset>
+
+      <fieldset class="istep" data-name="Training interest">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">03</span>Training interest</legend>
+        <p class="istep__hint">Group and team training are potential options that are still to be confirmed.</p>
+        <div class="opts opts--list">
+          <label class="ocard ocard--row"><input type="radio" name="interest" value="Private training" required><span><b>Private training</b><small>One-on-one coaching</small></span></label>
+          <label class="ocard ocard--row"><input type="radio" name="interest" value="Player development"><span><b>Player development</b><small>A flexible path for overall development</small></span></label>
+          <label class="ocard ocard--row"><input type="radio" name="interest" value="Group training — interest"><span><b>Group training — interest</b><small>Potential option, to be confirmed</small></span></label>
+          <label class="ocard ocard--row"><input type="radio" name="interest" value="Team training — interest"><span><b>Team training — interest</b><small>Potential option, to be confirmed</small></span></label>
+          <label class="ocard ocard--row"><input type="radio" name="interest" value="Not sure"><span><b>Not sure</b><small>Happy to talk it through</small></span></label>
+        </div>
+        <p class="istep__err" role="alert"></p>
+      </fieldset>
+
+      <fieldset class="istep" data-name="Development goal">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">04</span>Development goal</legend>
+        <p class="istep__hint">Choose any that apply — this tells Coach Hans what the player is interested in.</p>
+        <div class="chips">
+          <label class="chip-opt"><input type="checkbox" name="goal" value="General development"><span>General development</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Fundamentals"><span>Fundamentals</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Hitting"><span>Hitting</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Fielding"><span>Fielding</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Throwing"><span>Throwing</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Game understanding"><span>Game understanding</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Confidence"><span>Confidence</span></label>
+          <label class="chip-opt"><input type="checkbox" name="goal" value="Not sure"><span>Not sure</span></label>
+        </div>
+        <p class="istep__err" role="alert"></p>
+      </fieldset>
+
+      <fieldset class="istep" data-name="Contact details">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">05</span>Contact details</legend>
+        <p class="istep__hint">How Coach Hans can reply to you.</p>
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <span class="field__err" id="f-name-err"></span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <span class="field__err" id="f-email-err"></span>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Message <span class="opt">(optional)</span></label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Anything that would help — how long the player has been playing, what they'd like to work on, questions you have"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="istep" data-name="Review">
+        <legend class="istep__t" tabindex="-1"><span class="istep__n">06</span>Review &amp; send</legend>
+        <p class="istep__hint">Check the details, then send your inquiry.</p>
+        <dl class="review">
+          <div><dt>Player</dt><dd data-r="player"></dd><button type="button" class="review__edit" data-go="1">Edit<span class="sr-only"> player details</span></button></div>
+          <div><dt>Training interest</dt><dd data-r="interest"></dd><button type="button" class="review__edit" data-go="2">Edit<span class="sr-only"> training interest</span></button></div>
+          <div><dt>Development goal</dt><dd data-r="goal"></dd><button type="button" class="review__edit" data-go="3">Edit<span class="sr-only"> development goal</span></button></div>
+          <div><dt>Contact details</dt><dd data-r="contact"></dd><button type="button" class="review__edit" data-go="4">Edit<span class="sr-only"> contact details</span></button></div>
+        </dl>
+        <button class="btn btn--red btn--block iform__send" type="submit" data-magnetic>
+          <span>Send coaching inquiry</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </button>
+        <p class="iform__fine">Your details are only used to reply to this inquiry. <a class="ulink" href="privacy.html">Privacy</a></p>
+      </fieldset>
+
+      <div class="iform__nav">
+        <button type="button" class="iform__back" hidden><span aria-hidden="true">←</span> Back</button>
+        <button type="button" class="btn btn--dark iform__next"><span>Next</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
+      </div>
+
+      <div class="iform__done" hidden tabindex="-1">
+        <span class="iform__done-ball pball" aria-hidden="true"><span class="pball__holes"></span></span>
+        <p class="iform__done-k">Safe at home</p>
+        <p class="iform__done-t">Inquiry sent.</p>
+        <p class="iform__done-p"></p>
+        <button type="button" class="textlink iform__again">Send another inquiry</button>
+      </div>
+
+      <p class="iform__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ═════════ 11 — FINAL CTA + FOOTER (footer lives inside this section) ═════════ -->
+<section class="footer" id="final" aria-labelledby="closing-title">
+  <div class="wrap">
+    <div class="fcta">
+      <h2 class="fcta__title" id="closing-title">
+        <span class="line"><span class="line__in">Baseball training</span></span>
+        <span class="line"><span class="line__in"><em>built around the player.</em></span></span>
+      </h2>
+      <div class="fcta__side">
+        <p class="fcta__p">Personalized coaching with Coach Hans, designed to help players develop their skills, confidence and understanding of the game.</p>
+        <div class="fcta__btns">
+          <a class="btn btn--red" href="#start" data-focus="start" data-magnetic>
+            <span>Start training</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          </a>
+          <a class="btn btn--ghost" href="#about">
+            <span>Learn about coaching</span><span class="btn__ic" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="fbody">
+      <div class="fcourt">
+        <div class="fcourt__rally" aria-hidden="true"><span class="fcourt__x"><span class="fcourt__y"><span class="fcourt__ball"></span></span></span></div>
+
+        <div class="fzone fzone--base">
+          <span class="fzone__lbl" aria-hidden="true">Home plate</span>
+          <a class="flogo" href="#top" aria-label="Coach Hans, Baseball Coach — back to top">
+            <svg class="lm" viewBox="0 0 48 48" aria-hidden="true"><g class="lm-spin"><g class="lm-ball"><circle class="lm-c" cx="24" cy="24" r="20" pathLength="1"/><path class="lm-seam" d="M16 6.3Q22.5 24 16 41.7" pathLength="1"/><path class="lm-seam" d="M32 6.3Q25.5 24 32 41.7" pathLength="1"/><path class="lm-stitch" d="M16 6.3Q22.5 24 16 41.7M32 6.3Q25.5 24 32 41.7"/><path class="lm-h" d="M19.4 24h9.2"/></g></g></svg>
+            <span class="logo__text"><span class="logo__name"><span><em class="logo__coach">Coach</em> Hans</span></span><span class="logo__court" aria-hidden="true"><svg class="logo__line" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1v4M1 3h98M99 1v4M50 .5v5" pathLength="1"/></svg></span><span class="logo__tag">Baseball Coach</span></span>
+          </a>
+          <p class="fzone__p">Personal baseball coaching and player development.</p>
+          <p class="fpill"><i></i>Built around the player</p>
+        </div>
+
+        <nav class="fzone fzone--mid" aria-label="Explore">
+          <span class="fzone__lbl" aria-hidden="true">First base</span>
+          <p class="fzone__h">Explore</p>
+          <a class="flink" href="#about">About Coach Hans</a>
+          <a class="flink" href="#training">Training overview</a>
+          <a class="flink" href="#development">Player development</a>
+          <a class="flink" href="#approach">Coaching approach</a>
+          <a class="flink" href="#gallery">Gallery</a>
+        </nav>
+
+        <div class="fnet" aria-hidden="true"><span>Mound</span></div>
+
+        <div class="fzone fzone--mid">
+          <span class="fzone__lbl" aria-hidden="true">Second base</span>
+          <p class="fzone__h">Training</p>
+          <ul class="ffacts">
+            <li>Private training</li>
+            <li>Player development</li>
+            <li class="ffacts__tbc">Group training <small>(to confirm)</small></li>
+            <li class="ffacts__tbc">Team training <small>(to confirm)</small></li>
+          </ul>
+        </div>
+
+        <div class="fzone fzone--base">
+          <span class="fzone__lbl" aria-hidden="true">Third base</span>
+          <p class="fzone__h">Connect</p>
+          <a class="fsocial" href="#start" data-focus="start">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 4.5c1.6 2.2 1.6 12.8 0 15M15.8 4.5c-1.6 2.2-1.6 12.8 0 15"/></svg>
+            <span>Start training<small>Send a coaching inquiry</small></span><b aria-hidden="true">→</b>
+          </a>
+          <!-- Contact placeholder: add Hans's email / phone / socials here once confirmed -->
+          <p class="fsocial fsocial--soon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
+            <span>Direct contact<small>Details coming soon</small></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="fword" aria-hidden="true">
+        <span class="fword__o">Coach Hans</span>
+        <span class="fword__f">Coach Hans</span>
+      </div>
+
+      <div class="flegal">
+        <span>© <span id="year">2026</span> Coach Hans · Baseball Coach</span>
+        <a class="ulink" href="privacy.html">Privacy</a>
+        <button class="ftop" type="button">Back to top <span class="ftop__ball" aria-hidden="true"></span></button>
+      </div>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
