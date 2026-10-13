@@ -1,0 +1,11 @@
+{
+  "name": "vamospickle-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "media": "node optimize-media.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
